@@ -1,0 +1,18 @@
+!!com.aptana.scripting.model.BundleElement
+author: AlejoNext
+children: []
+copyright: GLP v2
+customProperties: null
+decreaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$)'}
+description: NodeJS bundle for Aptana Studio
+displayName: JavaScript
+fileTypeRegistry: {}
+fileTypes: []
+foldingStartMarkers: {}
+foldingStopMarkers: {}
+increaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^.*(\{[^}"'''']*|\([^)"'''']*)$)'}
+license: null
+licenseUrl: null
+path: bundle.rb
+repository: git://github.com/alejonext/nodejs.ruble.git
+visible: true
