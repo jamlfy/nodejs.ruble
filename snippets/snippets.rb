@@ -10,6 +10,11 @@ snippet t(:require) do |s|
 	s.expansion = 'var $1 = require(\'${1:sys}\');$0'
 end
 
+snippet t(:script) do |s|
+	s.trigger = '!node'
+	s.expansion = '#!/usr/bin/env node'
+end
+
 snippet t(:addListener) do |s|
 	s.trigger = 'addL'
 	s.expansion = 'addListener(\'${1:event}\', function(${2:Var}){
