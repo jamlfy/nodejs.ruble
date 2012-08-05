@@ -5,9 +5,7 @@ bundle do |bundle|
 	bundle.author = 'Alejandro Next'
 	bundle.copyright = 'GLP v2'
 	bundle.repository = 'git://githubundle.com/alejonext/nodejs.ruble.git'
-	bundle.description = <<END
-<a href="http://jade-lang.com/">Jade</a>is a high performance template engine heavily influenced by HAML and implemented with JavaScript for node.
-END
+	bundle.description = t(:bundle_description)
 	bundle.menu t(:bundle_name) do |node|
 		node.command t(:require)
 		node.command t(:addListener)
