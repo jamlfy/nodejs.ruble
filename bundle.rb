@@ -6,6 +6,7 @@ bundle do |bundle|
 	bundle.copyright = 'GLP v2'
 	bundle.repository = 'git://githubundle.com/alejonext/nodejs.ruble.git'
 	bundle.description = t(:bundle_description)
+	
 	bundle.menu t(:bundle_name) do |node|
 		node.command t(:require)
 		node.command t(:addListener)

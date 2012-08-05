@@ -1,5 +1,3 @@
-require 'ruble'
-
 snippet 'dirname' do |s|
 	s.trigger = 'dir'
 	s.scope = 'source.js'
