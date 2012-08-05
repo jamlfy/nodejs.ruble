@@ -1,6 +1,6 @@
-# NodeJS bundle for Aptana Studio
+# [NodeJs](http://nodejs.org) bundle for Aptana Studio
 
-NodeJS a bundle to enable related commands in Aptana Studio.
+[NodeJs](http://nodejs.org) a bundle to enable related commands in Aptana Studio.
 
 ## Authors
 
