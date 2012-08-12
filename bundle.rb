@@ -13,7 +13,7 @@ END
 		node_menu.scope = [ 'source.js' ]
 		node_menu.command t(:requires)
 		node_menu.command t(:addListener)
-		node_menu.command t(:app)
+		#FIXME node_menu.command t(:app)
 		node_menu.command t(:evn)
 		node_menu.command t(:modelfind)
 	end

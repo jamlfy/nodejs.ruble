@@ -23,13 +23,13 @@ with_defaults :scope => 'source.js' do
 	${2:Var}
 });$0'
 	end
-
-	snippet t(:appexpress) do |s|
-		s.trigger = 'app'
-		s.expansion = 'app.${1:method}(\'${2:path}\', function(req, res, next){
-
-});$0'
-	end
+#FIXME app.get('pah', function(req, res){...});
+#	snippet t(:appexpress) do |s|
+#		s.trigger = 'app'
+#		s.expansion = 'app.${1:method}(\'${2:path}\', function(req, res, next){
+#
+#});$0'
+#	end
 
 	snippet t(:env) do |s|
 		s.trigger = '.env'

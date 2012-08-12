@@ -2,7 +2,6 @@ en:
   bundle_name: 'NodeJs'
   requires: 'Require'
   addListener:'Add listener event'
-  appexpress: 'Add a metod, path and the function'
   env: 'Select de Process'
   filter: 'Filter'
   forEach: 'For each'
