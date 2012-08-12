@@ -1,9 +1,8 @@
 en:
   bundle_name: 'NodeJs'
-  bundle_description: 'NodeJS bundle for Aptana Studio'
-  require: 'Require'
+  requires: 'Require'
   addListener:'Add listener event'
-  app: 'Add a metod, path and the function'
+  appexpress: 'Add a metod, path and the function'
   env: 'Select de Process'
   filter: 'Filter'
   forEach: 'For each'

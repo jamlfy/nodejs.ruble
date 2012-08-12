@@ -2,7 +2,7 @@ require 'ruble'
 
 bundle do |bundle|
 	bundle.display_name = t(:bundle_name)
-	bundle.author = 'Alejandro Next'
+	bundle.author = 'AlejoNext'
 	bundle.copyright = 'Distributed under the MIT license.'
 	bundle.repository = 'git://githubundle.com/alejonext/nodejs.ruble.git'
 	bundle.description = <<END
@@ -11,7 +11,7 @@ bundle do |bundle|
 END
 	bundle.menu t(:bundle_name) do |node_menu|
 		node_menu.scope = [ 'source.js' ]
-		node_menu.command t(:require)
+		node_menu.command t(:requires)
 		node_menu.command t(:addListener)
 		node_menu.command t(:app)
 		node_menu.command t(:evn)
