@@ -14,4 +14,4 @@ en:
   readFile: 'Read a file'
   modelfind: 'Find model in mongo'
   exports: 'Exports modules'
-  script: 'Script NodeJs for Linux'
+  script: 'Script NodeJs for Linux
