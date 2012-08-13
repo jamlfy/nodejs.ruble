@@ -14,9 +14,14 @@ END
 		node_menu.command 'require'
 		node_menu.command 'addListener'
 		node_menu.command 'app'
-		#FIXME node_menu.command 'process_env'
-		#FIXME node_menu.command t(:modelfind)
-		node_menu.command 'filter'
+		node_menu.command t(:comments) do |submenu|
+			submenu.command 'function'
+			submenu.command 'comment'
+			submenu.command 'comment block'
+			submenu.command '@returns'
+			submenu.command '@param'
+		end
+		
 	end
 end
 
