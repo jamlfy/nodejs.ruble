@@ -17,7 +17,7 @@ with_defaults :scope => 'source.js' do
 		s.expansion = '#!/usr/bin/env node$0'
 	end
 # Simple
-		snippet 'var' do |s|
+	snippet 'var' do |s|
 		s.expansion = "var ${1:vname} = ${2:value};"
 		s.trigger = 'var'
 	end
@@ -102,6 +102,10 @@ with_defaults :scope => 'source.js' do
 	end
 
 # Helps
+	snippet 'setEncoding()' do |s|
+		s.expansion = ".setEncoding('${1:utf8}');"
+		s.trigger = '.se'
+	end
 	snippet 'app' do |s|
 		s.trigger = 'app'
 		s.expansion = 'app.${1:get/post/put/delete/use/configure/set/engine/param/all/render/listen}(${2:path}, function(req, res, next){
@@ -286,15 +290,11 @@ with_defaults :scope => 'source.js' do
 		s.trigger = 'cmt'
 	end
 	snippet '@returns' do |s|
-		s.expansion = "returns {${1:return_type}} ${2:description}"
-		s.trigger = 'returns'
+		s.expansion = "@returns {${1:return_type}} ${2:description}"
+		s.trigger = '@returns'
 	end
 	snippet '@param' do |s|
-		s.expansion = "param {${1:type}} ${2:name} ${3:description}	"
-		s.trigger = 'param'
-	end
-	snippet 'setEncoding()' do |s|
-		s.expansion = ".setEncoding('${1:utf8}');"
-		s.trigger = '.se'
+		s.expansion = "@param {${1:type}} ${2:name} ${3:description}	"
+		s.trigger = '@param'
 	end
 end
