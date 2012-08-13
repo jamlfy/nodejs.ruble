@@ -1,15 +1,2 @@
 es:
   bundle_name: 'NodeJs'
-  requires: 'Require'
-  addListener:'Add listener event'
-  env: 'Select de Process'
-  filter: 'Filter'
-  forEach: 'For each'
-  on: 'Create a event'
-  render: 'Render'
-  setInterval: 'Set interval'
-  console: 'Console'
-  readFile: 'Read a file'
-  modelfind: 'Find model in mongo'
-  exports: 'Exports modules'
-  script: 'Script NodeJs for Linux

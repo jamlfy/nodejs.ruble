@@ -7,73 +7,79 @@ with_defaults :scope => 'source.js' do
 		s.expansion = '__dirname$0'
 	end
 
-	snippet t(:requires) do |s|
+	snippet 'require' do |s|
 		s.trigger = 'require'
-		s.expansion = '\var ${1:sys} = require(\'${1:sys}\');$0'
+		s.expansion = 'var ${1:Module/sys/fs/path/http/net/child_process/util/crypto/tls/string_decoder/dgram/dns/url/punycode/readline/querystring/repl/vm/zlib/os/cluster/socketio} = require(\'${1}\');$0'
 	end
 
 	snippet t(:script) do |s|
 		s.trigger = '!node'
-		s.expansion = '\#!/usr/bin/env node$0'
+		s.expansion = '#!/usr/bin/env node$0'
 	end
 
-	snippet t(:addListener) do |s|
+	snippet 'addListener' do |s|
 		s.trigger = 'addListener'
 		s.expansion = 'addListener(\'${1:event}\', function(${2:Var}){
-	${2:Var}
+	${2:Var};
 });$0'
 	end
-#FIXME app.get('pah', function(req, res){...});
-#	snippet t(:appexpress) do |s|
-#		s.trigger = 'app'
-#		s.expansion = 'app.${1:method}(\'${2:path}\', function(req, res, next){
-#
-#});$0'
-#	end
 
-	snippet t(:env) do |s|
-		s.trigger = '.env'
-		s.expansion = 'process.env.${1:VARIABLE}$0'
+	snippet 'app' do |s|
+		s.trigger = 'app'
+		s.expansion = 'app.${1:get/post/put/delete/use/configure/set/engine/param/all/render/listen}(${2:path}, function(req, res, next){
+	
+});$0'
 	end
 
-	snippet t(:filter) do |s|
+	snippet 'express' do |s|
+		s.trigger = 'express'
+		s.expansion = 'express.${1:Model/bodyParser/cookieParser/session}();$0'
+	end
+
+	snippet 'response' do |s|
+		s.trigger = 'res'
+		s.expansion = 'res.${1:render/status/set/get/cookie/redirect/charset/json/type/format/attachment/sendfile/download/links/locals}(${2:Params});$0'
+	end
+
+	snippet 'process.env' do |s|
+		s.trigger = 'process.env'
+		s.expansion = 'process.env.${1:VARIABLE};$0'
+	end
+	
+	snippet 'filter' do |s|
 		s.trigger = 'filter'
-		s.expansion = 'filter(function(item){
-	return ${1:false};
+		s.expansion = 'filter(function(${1:item}){
+	return ${1:item};
 });$0'
 	end
 
-	snippet t(:forEach) do |s|
+	snippet 'forEach' do |s|
 		s.trigger = 'forEach'
-		s.expansion = 'forEach(function(${1:item},${2:index}){
+		s.expansion = 'forEach(function(${1:item}, ${2:index}){
 
 });$0'
 	end
 
-	snippet t(:on) do |s|
+	snippet 'on' do |s|
 		s.trigger = '.on'
 		s.expansion = '.on(\'${1:eventname}\', function(${2:err, res}){
-
+	
 });$0'
 	end
 
-	snippet t(:render) do |s|
-		s.trigger = '.ren'
-		s.expansion = '.render(\'${1:template}\', {
-	locals:{
-		${2:template Vars}
-	}
-});$0'
+	snippet 'send' do |s|
+		s.trigger = '.send'
+		s.expansion = '.send(\'${1:Message}\');$0'
 	end
 
-	snippet t(:setInterval) do |s|
+	snippet 'setInterval' do |s|
 		s.trigger = 'setInterval'
 		s.expansion = 'setInterval(${1:callback}, ${2:delay});$0'
 	end
 
-	snippet t(:console) do |s|
-		s.trigger = 'console'
-		s.expansion = 'console.${1:sintax}(\'${2:message}\');$0'
+	snippet 'console' do |s|
+		s.trigger = 'console.'
+		s.expansion = 'console.${1:log/error/warn/info/dir/time/timeEnd/trace/assert}(\'${2:message}\');$0'
 	end
 
 	snippet 'JSON.stringify' do |s|
@@ -86,24 +92,24 @@ with_defaults :scope => 'source.js' do
 		s.expansion = 'JSON.parse(${1:\'{\'string\':\'of json\'}});$0'
 	end
 
-	snippet t(:readFile) do |s|
+	snippet 'readFile' do |s|
 		s.trigger = '.readFile'
 		s.expansion = 'fs.readFile(\'${1:filename}\', function(err, ${2:data}){
 	${2:data}
 });$0'
 	end
+#FIXME MODEL.find(CONDITIONALS).all(function(RESULTS){...});
+#	snippet t(:modelfind) do |s|
+#		s.trigger = 'modelfind'
+#		s.expansion = '${1:Model}.find({ ${2:} }).all( function(${3:results}){
+#	${3:results}
+#});$0'
+#	end
 
-	snippet t(:modelfind) do |s|
-		s.trigger = 'modelfind'
-		s.expansion = '${1:Model}.find({ ${2:} }).all( function(${3:results}){
-	${3:results}
-});$0'
-	end
-
-	snippet t(:exports) do |s|
+	snippet 'exports' do |s|
 		s.trigger = 'exports'
 		s.expansion = 'exports.${1:Model} = ${2:function(){ 
 	
-};}$0'
+}};$0'
 	end
 end

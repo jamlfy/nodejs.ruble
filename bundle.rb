@@ -11,11 +11,25 @@ bundle do |bundle|
 END
 	bundle.menu t(:bundle_name) do |node_menu|
 		node_menu.scope = [ 'source.js' ]
-		node_menu.command t(:requires)
-		node_menu.command t(:addListener)
-		#FIXME node_menu.command t(:app)
-		node_menu.command t(:evn)
-		node_menu.command t(:modelfind)
+		node_menu.command 'require'
+		node_menu.command 'addListener'
+		node_menu.command 'app'
+		#FIXME node_menu.command 'process_env'
+		#FIXME node_menu.command t(:modelfind)
+		node_menu.command 'filter'
 	end
 end
 
+  # forEach: 'ForEach'
+  # on_create: 'CreateEvent'
+  # render: 'Render'
+  # setInterval: 'Setinterval'
+  # console: 'Console'
+  # readFile: 'Readfile'
+  # modelfind: 'FindModel'
+  # exports: 'Exports'
+  # appexpress: 'AppExpress'
+  # filter_js: 'filter'
+  # process_env: 'Process Env'
+  # requires: 'Require'
+  # addList:'addListener'
