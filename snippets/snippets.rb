@@ -256,7 +256,7 @@ with_defaults :scope => 'source.js' do
 
 		s.trigger = 'module'
 	end
-		snippet 'comment' do |s|
+	snippet 'comment' do |s|
 		s.expansion = "/**
  * ${1:Description}
  *
